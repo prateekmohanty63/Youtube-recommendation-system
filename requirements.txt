@@ -1,6 +1,4 @@
 Flask
-request
-sys
 pandas
 pprint
 matplotlib 
