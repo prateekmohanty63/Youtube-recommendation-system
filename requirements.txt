@@ -7,5 +7,5 @@ pprint
 afinn
 matplotlib 
 numpy
-spacy download 'en'
+spacy download en
 nltk
