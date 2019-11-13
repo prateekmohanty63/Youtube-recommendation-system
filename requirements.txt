@@ -4,7 +4,7 @@ request
 sys
 pandas
 pprint
-matplotlib.pyplot 
+matplotlib 
 numpy
 spacy
 warnings
@@ -15,4 +15,3 @@ datetime
 nltk
 gensim
 pyLDAvis
-pyLDAvis.sklearn
