@@ -26,11 +26,7 @@ from nltk.tokenize.toktok import ToktokTokenizer
 import re
 from bs4 import BeautifulSoup
 import unicodedata
-
-
-
 from scipy import interp
-
 from afinn import Afinn
 afn = Afinn(emoticons=True)
 
