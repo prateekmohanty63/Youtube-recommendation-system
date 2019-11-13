@@ -30,20 +30,9 @@ import unicodedata
 nlp = spacy.load('en', parse = False, tag=False, entity=False)
 tokenizer = ToktokTokenizer()
 
-import datetime
-from datetime import timedelta
 
 datetimeFormat = '%Y-%m-%d %H:%M:%S.%f'
 
-from sklearn.preprocessing import LabelEncoder, label_binarize
-from sklearn.model_selection import train_test_split
-from sklearn import metrics
-from sklearn.metrics import roc_auc_score, roc_curve, auc, accuracy_score
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from sklearn.linear_model import SGDClassifier, LogisticRegression
-from sklearn.pipeline import make_pipeline
-from sklearn.decomposition import NMF
-from sklearn.base import clone
 
 from scipy import interp
 
@@ -57,15 +46,9 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 import gensim
 
-from collections import Counter
 
-from IPython.display import SVG
-
-#from skater.core.local_interpretation.lime.lime_text import LimeTextExplainer
-from lime.lime_text import LimeTextExplainer
 
 import pyLDAvis
-import pyLDAvis.sklearn
 
 np.set_printoptions(precision=2, linewidth=80)
 
