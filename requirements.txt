@@ -3,4 +3,11 @@ apiclient
 pandas
 pprint
 matplotlib 
-
+numpy
+spacy
+bs4
+unicodedata
+datetime
+nltk
+gensim
+pyLDAvis
