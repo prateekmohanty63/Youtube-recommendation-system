@@ -11,5 +11,5 @@ google-api-python-client
 afinn
 matplotlib 
 numpy
-
+oauth2client
 nltk
