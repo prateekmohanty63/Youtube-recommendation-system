@@ -30,6 +30,7 @@ from afinn import Afinn
 afn = Afinn(emoticons=True)
 
 import nltk
+nltk.download()
 from nltk.corpus import sentiwordnet as swn
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import os
