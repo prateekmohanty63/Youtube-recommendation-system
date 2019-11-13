@@ -1,6 +1,7 @@
 Flask
 beautifulsoup4
 pyLDAvis
+en_core_web_sm
 apiclient
 pandas
 pprint
