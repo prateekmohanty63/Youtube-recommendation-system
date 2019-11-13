@@ -22,7 +22,6 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import nltk
-nltk.download('stopwords')
 from nltk.tokenize.toktok import ToktokTokenizer
 import re
 from bs4 import BeautifulSoup
@@ -30,6 +29,7 @@ import unicodedata
 from afinn import Afinn
 afn = Afinn(emoticons=True)
 
+nltk.download('all', halt_on_error=False)
 from nltk.corpus import sentiwordnet as swn
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import os
