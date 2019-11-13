@@ -8,8 +8,7 @@ Original file is located at
 """
 
 import sys
-import sys
-!{sys.executable} -m spacy download en
+import en_core_web_sm
 import pandas as pd
 import pprint
 import matplotlib.pyplot as pd
