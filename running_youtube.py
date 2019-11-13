@@ -32,7 +32,7 @@ afn = Afinn(emoticons=True)
 import nltk
 from nltk.corpus import sentiwordnet as swn
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-
+import os
 
 
 
@@ -43,6 +43,8 @@ datetimeFormat = '%Y-%m-%d %H:%M:%S.%f'
 nlp = spacy.load('en_core_web_sm')
 tokenizer = ToktokTokenizer()
 
+myCmd = 'python -m spacy download en_core_web_sm'
+os.system(myCmd)
 
 np.set_printoptions(precision=2, linewidth=80)
 
