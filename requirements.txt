@@ -1,4 +1,5 @@
 Flask
+bs4
 apiclient
 pandas
 pprint
