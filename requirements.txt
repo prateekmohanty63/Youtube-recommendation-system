@@ -3,6 +3,7 @@ beautifulsoup4
 apiclient
 pandas
 pprint
+afinn
 matplotlib 
 numpy
 spacy
