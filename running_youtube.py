@@ -29,7 +29,7 @@ import unicodedata
 from afinn import Afinn
 afn = Afinn(emoticons=True)
 
-nltk.download('all', halt_on_error=False)
+nltk.download('stopwords', halt_on_error=False)
 from nltk.corpus import sentiwordnet as swn
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import os
