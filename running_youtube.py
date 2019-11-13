@@ -45,7 +45,7 @@ import gensim
 import pyLDAvis
 datetimeFormat = '%Y-%m-%d %H:%M:%S.%f'
 
-nlp = spacy.load('en', parse = False, tag=False, entity=False)
+nlp = spacy.load('en')
 tokenizer = ToktokTokenizer()
 
 
