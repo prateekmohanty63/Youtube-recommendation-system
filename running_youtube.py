@@ -27,11 +27,6 @@ import re
 import BeautifulSoup4
 import unicodedata
 
-nlp = spacy.load('en', parse = False, tag=False, entity=False)
-tokenizer = ToktokTokenizer()
-
-
-datetimeFormat = '%Y-%m-%d %H:%M:%S.%f'
 
 
 from scipy import interp
@@ -40,7 +35,6 @@ from afinn import Afinn
 afn = Afinn(emoticons=True)
 
 import nltk
-nltk.download('all', halt_on_error=False)
 from nltk.corpus import sentiwordnet as swn
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
@@ -49,6 +43,11 @@ import gensim
 
 
 import pyLDAvis
+datetimeFormat = '%Y-%m-%d %H:%M:%S.%f'
+
+nlp = spacy.load('en', parse = False, tag=False, entity=False)
+tokenizer = ToktokTokenizer()
+
 
 np.set_printoptions(precision=2, linewidth=80)
 
