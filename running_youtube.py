@@ -33,7 +33,7 @@ import nltk
 from nltk.corpus import sentiwordnet as swn
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-import gensim
+
 
 
 
