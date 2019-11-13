@@ -34,11 +34,6 @@ from nltk.corpus import sentiwordnet as swn
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import os
 
-myCmd = 'python -m spacy download en_core_web_sm'
-os.system(myCmd)
-
-
-
 import pyLDAvis
 datetimeFormat = '%Y-%m-%d %H:%M:%S.%f'
 
