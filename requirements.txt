@@ -9,4 +9,3 @@ matplotlib
 numpy
 spacy
 nltk
-
