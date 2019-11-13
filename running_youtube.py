@@ -361,7 +361,6 @@ def main(topic):
 
         print(score_reviews(comments_to_evaluate))
         video_rating_comment_based.append(score_reviews(comments_to_evaluate))
-
     url_rating_dict={}
     for url in video_links:
       for rating in video_rating_comment_based:
