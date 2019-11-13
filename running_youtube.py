@@ -24,7 +24,7 @@ warnings.filterwarnings("ignore")
 import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 import re
-import BeautifulSoup4
+import BeautifulSoup
 import unicodedata
 
 
@@ -58,7 +58,7 @@ def strip_html_tags(text):
     them before extracting features. The BeautifulSoup library does an excellent job in
     providing necessary functions for this. Our strip_html_tags(...) function enables in cleaning and stripping out HTML code.
     '''
-    soup = BeautifulSoup4(text, "html.parser")
+    soup = BeautifulSoup(text, "html.parser")
     stripped_text = soup.get_text()
     return stripped_text
 
