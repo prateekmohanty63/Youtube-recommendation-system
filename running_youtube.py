@@ -9,10 +9,6 @@ Original file is located at
 
 import sys
 
-
-from apiclient.discovery import build
-from apiclient.errors import HttpError
-from oauth2client.tools import argparser
 import pandas as pd
 import pprint
 import matplotlib.pyplot as pd
