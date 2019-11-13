@@ -1,5 +1,6 @@
 Flask
 apiclient
+apiclient.discovery
 pandas
 pprint
 matplotlib 
