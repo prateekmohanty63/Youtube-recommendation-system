@@ -24,7 +24,7 @@ warnings.filterwarnings("ignore")
 import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 import re
-from BeautifulSoup import BeautifulSoup 
+from bs4 import BeautifulSoup
 import unicodedata
 
 
