@@ -8,7 +8,8 @@ Original file is located at
 """
 
 import sys
-
+import sys
+!{sys.executable} -m spacy download en
 import pandas as pd
 import pprint
 import matplotlib.pyplot as pd
@@ -42,7 +43,7 @@ os.system(myCmd)
 import pyLDAvis
 datetimeFormat = '%Y-%m-%d %H:%M:%S.%f'
 
-nlp = spacy.load('en_core_web_sm')
+nlp = spacy.load('en')
 tokenizer = ToktokTokenizer()
 
 
