@@ -17,6 +17,6 @@ def result():
     
       for key, value in result.items():
           print(key,value)
-      return (key,value)
+      return render_template("result.html",result = result)
 if __name__ == "__main__":
     app.run(debug=True)
