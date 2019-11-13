@@ -37,7 +37,7 @@ import os
 import pyLDAvis
 datetimeFormat = '%Y-%m-%d %H:%M:%S.%f'
 
-nlp = spacy.load('en')
+nlp = spacy.load('en_core_web_sm')
 tokenizer = ToktokTokenizer()
 
 
