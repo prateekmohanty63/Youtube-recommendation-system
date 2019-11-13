@@ -5,9 +5,4 @@ pprint
 matplotlib 
 numpy
 spacy
-
-unicodedata
-datetime
 nltk
-gensim
-pyLDAvis
