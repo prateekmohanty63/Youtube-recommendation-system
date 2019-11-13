@@ -4,7 +4,6 @@ pprint
 matplotlib 
 numpy
 spacy
-warnings
 re
 bs4
 unicodedata
