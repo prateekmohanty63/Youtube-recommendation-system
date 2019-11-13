@@ -1,5 +1,5 @@
 Flask
-beautifulsoup4
+beautifulsoup
 apiclient
 pandas
 pprint
