@@ -14,9 +14,10 @@ def search_topic():
 def result():
    if request.method == 'POST':
       result = request.form
+      s=()
       for key, value in result.items():
-          print(key,value)
-      return render_template("result.html",result = result)
+          s=(key,value)
+      return render_template("result.html",result = s)
 
 
 if __name__ == "__main__":
