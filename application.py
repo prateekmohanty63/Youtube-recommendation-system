@@ -17,6 +17,6 @@ def result():
       s=""
       for key, value in result.items():
           s=value
-      return render_template("result.html",result = sort(running_youtube.main(s)))
+      return render_template("result.html",result = sorted(running_youtube.main(s)))
 if __name__ == "__main__":
     app.run(debug=True)
