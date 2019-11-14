@@ -368,7 +368,7 @@ def main(topic):
         url_rating_dict[url]=rating
         video_rating_comment_based.remove(rating)
         break
-      url_rating_dict=sorted(url_rating_dict.items(), key = lambda kv: kv[1], reverse = True)[:5]
+    url_rating_dict=sorted(url_rating_dict.items(), key = lambda kv: kv[1], reverse = True)
     return (url_rating_dict)
 
 def remNonChar(inputString):
