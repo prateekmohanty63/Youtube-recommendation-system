@@ -4,11 +4,14 @@
       <h1> TOP 5 VIDEOS ARE:- </h1>
       <table border = 1>
          {% for value in result %}
+         
             <tr>
                <td> <a href="https://www.youtube.com/watch?v={{value[0]}}">Click here to watch this video </a>  {{value[0] }} </td>
-               <td> <img src="{{url}}" alt="Smiley face" height="42" width="42"> </td>
+
          </tr>
-         
+            {% endfor %}
+          {% for img_url in url%}
+               <td> <img src="{{img_url}}" alt="Smiley face" height="42" width="42"> </td>
          {% endfor %}
       </table>
    </body>
