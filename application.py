@@ -1,4 +1,5 @@
-from flask import Flask,render_template,request,urllib
+from flask import Flask,render_template,request
+
 import running_youtube
 app = Flask(__name__)
 
@@ -23,7 +24,7 @@ def result():
       img_url=[]
       for video in ss:
             urls = "https://img.youtube.com/vi/"+video[0]+"/maxresdefault.jpg"
-            img_url.append(urllib.request.urlretrieve(url, 'image1.jpg'))
+            img_url.append(request.urlretrieve(url, 'image1.jpg'))
       return render_template("result.html",result = ss,url=img_url)
 if __name__ == "__main__":
     app.run(debug=True)
