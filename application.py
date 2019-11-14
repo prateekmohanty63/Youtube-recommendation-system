@@ -20,6 +20,10 @@ def result():
       ss=running_youtube.main(s)
       print("ss is",ss)
       print("ss is",type(ss))
-      return render_template("result.html",result = ss)
+      img_url=[]
+      for video in ss:
+            url = 'https://img.youtube.com/vi/'+id+'/maxresdefault.jpg'
+            img_url.append(urllib.request.urlretrieve(url, 'image1.jpg'))
+      return render_template("result.html",result = ss,url=img_url)
 if __name__ == "__main__":
     app.run(debug=True)
