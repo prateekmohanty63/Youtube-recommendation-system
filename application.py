@@ -17,7 +17,7 @@ def result():
       s=""
       for key, value in result.items():
           s=value
-      ss=running_youtube.main(s):
+      ss=running_youtube.main(s)
       sorted(ss.iteritems(), key = lambda x : x[1])
 
         
