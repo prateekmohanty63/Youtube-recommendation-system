@@ -20,9 +20,6 @@ def result():
       ss=running_youtube.main(s)
       print("ss is",ss)
       print("ss is",type(ss))
-      ss=sorted(ss.iteritems(), key = lambda x : x[1])
-      print("ss is",ss)
-        
       return render_template("result.html",result = ss)
 if __name__ == "__main__":
     app.run(debug=True)
