@@ -22,7 +22,7 @@ def result():
       print("ss is",type(ss))
       img_url=[]
       for video in ss:
-            url = 'https://img.youtube.com/vi/'+id+'/maxresdefault.jpg'
+            urls = "https://img.youtube.com/vi/"+video[0]+"/maxresdefault.jpg"
             img_url.append(urllib.request.urlretrieve(url, 'image1.jpg'))
       return render_template("result.html",result = ss,url=img_url)
 if __name__ == "__main__":
