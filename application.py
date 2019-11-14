@@ -22,9 +22,12 @@ def result():
       print("ss is",ss)
       print("ss is",type(ss))
       img_url=[]
+      url1=[]
       for video in ss:
             urls = "https://img.youtube.com/vi/"+video[0]+"/maxresdefault.jpg"
             img_url.append(urls)
-      return render_template("result.html",result = ss,url=img_url)
+            url_video="https://www.youtube.com/watch?v="+video[0]
+            url1.append(url_video)
+      return render_template("result.html",result = url1,url=img_url)
 if __name__ == "__main__":
     app.run(debug=True)
