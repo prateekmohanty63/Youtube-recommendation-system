@@ -17,6 +17,6 @@ def result():
       s=""
       for key, value in result.items():
           s=value
-      return render_template("result.html",result = result)
+      return render_template("result.html",result = running_youtube.main(s))
 if __name__ == "__main__":
     app.run(debug=True)
