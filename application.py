@@ -24,7 +24,7 @@ def result():
       img_url=[]
       for video in ss:
             urls = "https://img.youtube.com/vi/"+video[0]+"/maxresdefault.jpg"
-            img_url.append(request.urlretrieve(url, 'image1.jpg'))
+            img_url.append(urls)
       return render_template("result.html",result = ss,url=img_url)
 if __name__ == "__main__":
     app.run(debug=True)
