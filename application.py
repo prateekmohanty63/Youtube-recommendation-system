@@ -18,7 +18,7 @@ def result():
       for key, value in result.items():
           s=value
       ss=running_youtube.main(s)
-      sorted(ss.iteritems(), key = lambda x : x[1])
+      ss=sorted(ss.iteritems(), key = lambda x : x[1])
 
         
       return render_template("result.html",result = ss)
