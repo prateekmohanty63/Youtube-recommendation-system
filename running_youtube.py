@@ -282,7 +282,7 @@ def score_reviews(reviews):
         overall_score = overall_score + compound_score
     return (overall_score/len(score_list))
 
-DEVELOPER_KEY = "AIzaSyBYCuNavpfCtQkfE_seJrK91W55UveOleQ"
+DEVELOPER_KEY = "AIzaSyAS7SlGvSDvhkILiCi79JBQONEg6z5ou0w"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,developerKey=DEVELOPER_KEY)
