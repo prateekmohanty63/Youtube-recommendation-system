@@ -9,6 +9,7 @@ Original file is located at
 """
 import sys
 import en_core_web_sm
+import numpy as np
 import pandas as pd
 import pprint
 import matplotlib.pyplot as pd
