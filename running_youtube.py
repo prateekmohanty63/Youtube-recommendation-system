@@ -36,7 +36,7 @@ from nltk.corpus import sentiwordnet as swn
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import os
 
-import pyLDavis
+import pyLDAvis
 datetimeFormat= '%Y-%m-%d %H:%M:%S.%f'
 
 nlp=spacy.load('en_core_web_sm')
