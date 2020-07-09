@@ -18,8 +18,6 @@ from apiclient.discovery import build
 from apiclient.errors import HttpError
 from oauth2client.tools import argparser
 
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
 import spacy
 import warnings
 warnings.filterwarnings("ignore")
@@ -35,6 +33,9 @@ afn=Afinn(emoticons=True)
 nltk.download('stopwords',halt_on_error=False)
 from nltk.corpus import sentiwordnet as swn
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
 import os
 
 import pyLDAvis
