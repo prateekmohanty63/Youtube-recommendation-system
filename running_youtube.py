@@ -207,6 +207,8 @@ def expand_contractions(text,contraction_mapping=CONTRACTION_MAP):
     expanded_text=re.sub("'","",expanded_text)
     return expanded_text
 
+
+
 def remove_special_characters(text):
     ''' Remove special characters using simple regexes'''
     text=re.sub(r'[^a-zA-z0-9\s]','',text)
@@ -261,7 +263,10 @@ def normalize_corpus(corpus,html_stripping=True,contraction_expansion=True,accen
     if stopword_removal:
         doc=remove_stopwords(doc,is_lower_case=text_lower_case)
     normalized_corpus.append(doc)
-    return doc
+    return normalized_corpus
+
+
+
 
 def score_reviews(reviews):
     score_list = []
