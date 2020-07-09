@@ -180,59 +180,37 @@ CONTRACTION_MAP = {
 "you've": "you have"
 }
 
-def expand_contractions(text, contraction_mapping=CONTRACTION_MAP):
+def expand_contractions(text,contraction_mapping=CONTRACTION_MAP):
     '''
-    Expanding Contractions¶
-    In the English language, contractions are basically shortened versions of words or syllables.
-    Contractions pose a problem in text normalization because we have to deal with special characters like the apostrophe
-    and we also have to convert each contraction to its expanded, original form.
-    Our expand_contractions(...) function uses regular expressions and various contractions mapped to expand all contractions in our text corpus.
+    Removing shortend versions of word or syllables, to deal with apostrophes. We expand contracted form to its original form.
     '''
+    contractions_pattern=re.compile('({})'.format('|'.join(contraction_mapping.keys())),flags=re.IGNORECASE | re.DOTALL)
+                                             
 
-    contractions_pattern = re.compile('({})'.format('|'.join(contraction_mapping.keys())),
-                           flags=re.IGNORECASE|re.DOTALL) #re.compile takes and argument and flags and converts the argument to a pattern object,for example
-                           # the pattern object has pattern (are'nt | haven't |...) and as flag has IGNORECASE enable [A-Z] can map to small a to z too and
-                           # DOTALL allows '.' to refer every character and new line too.
-
-
-    def expand_match(contraction):
-        match = contraction.group(0)
-        first_char = match[0]
+def expand_match(contraction):
+        match=contraction.group(0)
+        first_char=match[0]
         expanded_contraction = contraction_mapping.get(match)\
-                                if contraction_mapping.get(match)\
-                                else contraction_mapping.get(match.lower())
-        expanded_contraction = first_char+expanded_contraction[1:]
+                            if contraction_mapping.get(match)\
+                            else contraction_mapping.get(match.lower())
+        expanded_contraction=first_char+expanded_contraction[1:]
         return expanded_contraction
-
-    expanded_text = contractions_pattern.sub(expand_match, text)
-    expanded_text = re.sub("'","", expanded_text)
+    expanded_text=contractions_pattern.sub(expand_match,text)
+    expanded_text=re.sub("'","",expanded_text)
     return expanded_text
 
 def remove_special_characters(text):
-    '''
-    Removing Special Characters
-    Simple regexes can be used to achieve this. Our function remove_special_characters(...) helps us remove special characters.
-    In our code, we have retained numbers but you can also remove numbers if you do not want them in your normalized corpus.
-    '''
-    text = re.sub(r'[^a-zA-z0-9\s]', '', text)
+    ''' Remove special characters using simple regexes'''
+    text=re.sub(r'[^a-zA-z0-9\s]','',text)
     return text
 
 def lemmatize_text(text):
-    '''
-    Lemmatizing text
-    Word stems are usually the base form of possible words that can be created by attaching affixes like prefixes and
-    suffixes to the stem to create new words. This is known as inflection. The reverse process of obtaining the base form of a
-    word is known as stemming. The nltk package offers a wide range of stemmers like the PorterStemmer and LancasterStemmer.
-    Lemmatization is very similar to stemming, where we remove word affixes to get to the base form of a word. However the base
-    form in this case is known as the root word but not the root stem. The difference being that the root word is always a
-    lexicographically correct word, present in the dictionary, but the root stem may not be so. We will be using lemmatization only
-    in our normalization pipeline to retain lexicographically correct words. The function lemmatize_text(...) helps us with this aspect
-    '''
-    text = nlp(text)
-    text = ' '.join([word.lemma_ if word.lemma_ != '-PRON-' else word.text for word in text])
+    '''Find word stem'''
+    text=nlp(text)
+    text=' '.join([word.lemma_ if word.lemma_!='-PRON-' else word.text for word in text])
     return text
 
-stopword_list = nltk.corpus.stopwords.words('english')
+stopword_list=ntlk.corpus.stopwords.words('english')
 stopword_list.remove('no')
 stopword_list.remove('not')
 
