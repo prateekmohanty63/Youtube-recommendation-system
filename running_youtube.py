@@ -240,30 +240,30 @@ def remove_stopwords(text,is_lower_case=False):
 def normalize_corpus(corpus,html_stripping=True,contraction_expansion=True,accented_char_removal=True,text_lower_case=True,text_lemmatization=True,
                      special_char_removal=True,stopword_removal=True):
     normalized_corpus=[]
-    doc=corpus
-    if html_stripping:
-        doc=strip_html_tags(doc)
-    if accented_char_removal:
-        doc=remove_accented_chars(doc)
+    for doc in corpus
+        if html_stripping:
+            doc=strip_html_tags(doc)
+        if accented_char_removal:
+            doc=remove_accented_chars(doc)
     
-    if contraction_expansion:
-        doc=expand_contractions(doc)
+        if contraction_expansion:
+            doc=expand_contractions(doc)
     
-    if text_lower_case:
-        doc=doc.lower()
+        if text_lower_case:
+            doc=doc.lower()
     
-    doc=re.sub(r'[\r|\n|\r\n]+',' ',doc)
-    special_char_pattern =re.compile(r'([{.(-)!}])')
-    doc=special_char_pattern.sub(" \\1 ", doc)
-    if text_lemmatization:
-        doc=lemmatize_text(doc)
-    if special_char_removal:
-        doc=remove_special_characters(doc)
+        doc=re.sub(r'[\r|\n|\r\n]+',' ',doc)
+        special_char_pattern =re.compile(r'([{.(-)!}])')
+        doc=special_char_pattern.sub(" \\1 ", doc)
+        if text_lemmatization:
+            doc=lemmatize_text(doc)
+        if special_char_removal:
+            doc=remove_special_characters(doc)
         
-    doc=re.sub(' +',' ',doc)
-    if stopword_removal:
-        doc=remove_stopwords(doc,is_lower_case=text_lower_case)
-    normalized_corpus.append(doc)
+        doc=re.sub(' +',' ',doc)
+        if stopword_removal:
+            doc=remove_stopwords(doc,is_lower_case=text_lower_case)
+        normalized_corpus.append(doc)
     return normalized_corpus
 
 
