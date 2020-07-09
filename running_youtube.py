@@ -50,6 +50,9 @@ def strip_html_tags(text):
     stripped_text=soup.get_text();
     return stripped_text
 
+
+
+
 def remove_accented_chars(text):
     '''To remove accented characters, accented characters are converted and standardized into ASCII characters'''
     text=unicodedata.normalize('NFKD',text).encode('ascii','ignore').decode('utf-8','ignore')
@@ -184,6 +187,7 @@ CONTRACTION_MAP = {
 "you've": "you have"
 }
 
+
 def expand_contractions(text,contraction_mapping=CONTRACTION_MAP):
     '''
     Removing shortend versions of word or syllables, to deal with apostrophes. We expand contracted form to its original form.
@@ -191,7 +195,7 @@ def expand_contractions(text,contraction_mapping=CONTRACTION_MAP):
     contractions_pattern=re.compile('({})'.format('|'.join(contraction_mapping.keys())),flags=re.IGNORECASE | re.DOTALL)
                                              
 
-def expand_match(contraction):
+    def expand_match(contraction):
         match=contraction.group(0)
         first_char=match[0]
         expanded_contraction = contraction_mapping.get(match)\
