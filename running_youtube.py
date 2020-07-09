@@ -221,7 +221,7 @@ def lemmatize_text(text):
     text=' '.join([word.lemma_ if word.lemma_!='-PRON-' else word.text for word in text])
     return text
 
-stopword_list=ntlk.corpus.stopwords.words('english')
+stopword_list=nltk.corpus.stopwords.words('english')
 stopword_list.remove('no')
 stopword_list.remove('not')
 
