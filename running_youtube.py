@@ -232,7 +232,7 @@ def remove_stopwords(text,is_lower_case=False):
         filtered_tokens=[token for token in tokens if token not in stopword_list]
     else:
         filtered_tokens==[token for token in tokens if token.lower not in stopword_list]
-    filtered_text=' '.join(filteref_tokens)
+    filtered_text=' '.join(filtered_tokens)
     return filtered_text
 
 
