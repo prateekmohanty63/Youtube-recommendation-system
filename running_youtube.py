@@ -214,24 +214,16 @@ stopword_list=ntlk.corpus.stopwords.words('english')
 stopword_list.remove('no')
 stopword_list.remove('not')
 
-def remove_stopwords(text, is_lower_case=False):
-    '''
-
-    Words which have little or no significance especially when constructing meaningful features from text
-    are also known as stopwords or stop words. These are usually words that end up having the maximum frequency if you do
-     a simple term or word frequency in a document corpus. Words like a, an, the, and so on are considered to be stopwords.
-     There is no universal stopword list but we use a standard English language stopwords list from nltk. You can also add
-      your own domain specific stopwords if needed.
-    The function remove_stopwords(...) helps us remove stopwords and retain words having the most significance and context in a corpus.
-    '''
-    tokens = tokenizer.tokenize(text)
-    tokens = [token.strip() for token in tokens]
+def remove_stopwords(text,is_lower_case=False):
+    tokens=tokenizer.tokenize(text)
+    tokens=[token.strip() for token in tokens]
     if is_lower_case:
-        filtered_tokens = [token for token in tokens if token not in stopword_list]
+        filtered_tokens=[token for token in tokens if token not in stopword_list]
     else:
-        filtered_tokens = [token for token in tokens if token.lower() not in stopword_list]
-    filtered_text = ' '.join(filtered_tokens)
+        filtered_tokens==[token for token in tokens if token.lower not in stopword_list]
+    filtered_text=' '.join(filteref_tokens)
     return filtered_text
+
 
 def normalize_corpus(corpus, html_stripping=True, contraction_expansion=True,
                      accented_char_removal=True, text_lower_case=True,
