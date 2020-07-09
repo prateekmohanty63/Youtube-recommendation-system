@@ -46,7 +46,7 @@ np.set_printoptions(precision=2,linewidth=80)
 def strip_html_tags(text):
     '''To strip HTML tags using Beautiful Soup'''
     
-    soup=BeautifulSoup(text,"htmp.parser")
+    soup=BeautifulSoup(text,"html.parser")
     stripped_text=soup.get_text();
     return stripped_text
 
