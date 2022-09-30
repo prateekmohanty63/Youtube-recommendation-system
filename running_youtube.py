@@ -49,7 +49,7 @@ def strip_html_tags(text):
     '''To strip HTML tags using Beautiful Soup'''
     
     soup=BeautifulSoup(text,"html.parser")
-    stripped_text=soup.get_text();
+    stripped_text=soup.get_text()
     return stripped_text
 
 
